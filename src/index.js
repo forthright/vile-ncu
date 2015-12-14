@@ -5,6 +5,7 @@ let _ = require("lodash")
 let Promise = require("bluebird")
 
 const node_modules = path.join(__dirname, "..", "node_modules")
+// HACK
 const ncu = path.resolve(path.join(node_modules, ".bin", "ncu"))
 const PKG_JSON = "package.json"
 
