@@ -9,10 +9,8 @@ const node_modules = path.join(__dirname, "..", "node_modules")
 const ncu = path.resolve(path.join(node_modules, ".bin", "ncu"))
 const PKG_JSON = "package.json"
 
-let no_issue = () => [ vile.issue(vile.OK, PKG_JSON) ]
-
-let punish = (plugin_data) => {
-  return new Promise((resolve, reject) => {
+let punish = (plugin_data) =>
+  new Promise((resolve, reject) => {
     let pkg = JSON.parse(fs.readFileSync(
       path.join(process.cwd(), PKG_JSON), "utf-8"
     ))
@@ -27,18 +25,22 @@ let punish = (plugin_data) => {
       .then((stdout) => {
         let upgradeable = stdout ? JSON.parse(stdout) : null
 
-        resolve(upgradeable ?
-          _.map(upgradeable, (version, name) => {
-            return vile.issue(
-              vile.WARNING,
-              PKG_JSON,
-              `${name} ${deps[name] || dev_deps[name]} < ${version}`
-            )
-          }) : no_issue())
+        resolve(_.map(upgradeable, (version, name) => {
+          let current = deps[name] || dev_deps[name]
+          return vile.issue({
+            type: vile.DEP,
+            path: PKG_JSON,
+            name: name,
+            current: current,
+            latest: version,
+            title: "New dependency release",
+            msessage: `${name} ${current} < ${version}`,
+            signature: `ncu::${name}::${current}::${version}`
+          })
+        }))
       })
       .catch(reject)
   })
-}
 
 module.exports = {
   punish: punish
