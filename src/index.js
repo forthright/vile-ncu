@@ -34,7 +34,7 @@ let punish = (plugin_data) =>
             current: current,
             latest: version,
             title: "New dependency release",
-            msessage: `${name} ${current} < ${version}`,
+            message: `${name} ${current} < ${version}`,
             signature: `ncu::${name}::${current}::${version}`
           })
         }))
