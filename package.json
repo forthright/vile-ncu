@@ -1,6 +1,6 @@
 {
   "name": "@brentlintner/vile-ncu",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A vile plugin for npm-check-updates",
   "main": "lib/index.js",
   "files": [
