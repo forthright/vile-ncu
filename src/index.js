@@ -1,6 +1,6 @@
 let fs = require("fs")
 let path = require("path")
-let vile = require("@brentlintner/vile")
+let vile = require("@forthright/vile")
 let _ = require("lodash")
 let Promise = require("bluebird")
 
