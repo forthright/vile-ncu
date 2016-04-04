@@ -2,6 +2,16 @@
   "name": "@forthright/vile-ncu",
   "version": "0.1.7",
   "description": "A vile plugin for npm-check-updates",
+  "author": "Brent Lintner <brent.lintner@gmail.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/brentlintner/vile-ncu/issues"
+  },
+  "homepage": "https://github.com/brentlintner/vile-ncu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brentlintner/vile-ncu.git"
+  },
   "main": "lib/index.js",
   "files": [
     "bin",
@@ -19,6 +29,7 @@
     "npm",
     "check",
     "dependencies",
+    "dependency",
     "update"
   ],
   "dependencies": {
