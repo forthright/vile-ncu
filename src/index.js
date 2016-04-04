@@ -4,9 +4,7 @@ let vile = require("@forthright/vile")
 let _ = require("lodash")
 let Promise = require("bluebird")
 
-const node_modules = path.join(__dirname, "..", "node_modules")
-// HACK
-const ncu = path.resolve(path.join(node_modules, ".bin", "ncu"))
+const NCU_BIN = "ncu"
 const PKG_JSON = "package.json"
 
 let punish = (plugin_data) =>
@@ -21,7 +19,7 @@ let punish = (plugin_data) =>
     let opts = { args: ["--jsonUpgraded"] }
 
     vile
-      .spawn(ncu, opts)
+      .spawn(NCU_BIN, opts)
       .then((stdout) => {
         let upgradeable = stdout ? JSON.parse(stdout) : null
 
