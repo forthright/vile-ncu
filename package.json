@@ -1,6 +1,6 @@
 {
   "name": "@forthright/vile-ncu",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "A vile plugin for npm-check-updates",
   "author": "Brent Lintner <brent.lintner@gmail.com>",
   "license": "MPL-2.0",
