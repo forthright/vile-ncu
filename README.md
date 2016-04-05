@@ -9,7 +9,9 @@ A [vile](https://vile.io) plugin for [npm-check-updates](https://github.com/tjun
 
 ## Installation
 
-    npm i --save-dev @forthright/vile-ncu
+    npm i npm-check-updates --save-dev
+    npm i @forthright/vile --save-dev
+    npm i @forthright/vile-ncu --save-dev
 
 ## Restrictions
 
