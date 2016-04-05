@@ -33,9 +33,11 @@
     "update"
   ],
   "dependencies": {
-    "@forthright/vile": "^0.6.1",
     "bluebird": "^3.3.4",
-    "lodash": "^4.8.1",
+    "lodash": "^4.8.1"
+  },
+  "peerDependencies": {
+    "@forthright/vile": "^0.6.1",
     "npm-check-updates": "^2.6.1"
   },
   "devDependencies": {

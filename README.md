@@ -1,6 +1,6 @@
 # vile-ncu
 
-A [vile](http://vile.io) plugin for [npm-check-updates](https://github.com/tjunnone/npm-check-updates).
+A [vile](https://vile.io) plugin for [npm-check-updates](https://github.com/tjunnone/npm-check-updates).
 
 ## Requirements
 
@@ -9,7 +9,7 @@ A [vile](http://vile.io) plugin for [npm-check-updates](https://github.com/tjunn
 
 ## Installation
 
-    npm i vile-ncu
+    npm i --save-dev @forthright/vile-ncu
 
 ## Restrictions
 
