@@ -1,7 +1,6 @@
 let fs = require("fs")
 let path = require("path")
 let vile = require("@forthright/vile")
-let execa = require("execa")
 let _ = require("lodash")
 let Promise = require("bluebird")
 
@@ -16,12 +15,10 @@ let punish = (plugin_data) =>
 
     let deps = _.get(pkg, "dependencies", [])
     let dev_deps = _.get(pkg, "devDependencies", [])
+    let args = { args: ["--jsonUpgraded"] }
 
-    let opts = { args: ["--jsonUpgraded"] }
-
-    execa(NCU_BIN, opts)
-      .then((result) => {
-        let stdout = _.get(result, "stdout")
+    vile.spawn(NCU_BIN, args)
+      .then((stdout) => {
         let upgradeable = stdout ? JSON.parse(stdout) : null
 
         resolve(_.map(upgradeable, (version, name) => {

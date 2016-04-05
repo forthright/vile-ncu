@@ -34,7 +34,6 @@
   ],
   "dependencies": {
     "bluebird": "^3.3.4",
-    "execa": "^0.2.2",
     "lodash": "^4.8.1"
   },
   "peerDependencies": {
