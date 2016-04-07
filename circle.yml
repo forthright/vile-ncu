@@ -1,0 +1,11 @@
+machine:
+  node:
+    version: 5.10.0
+
+dependencies:
+  post:
+    - npm run compile
+
+test:
+  override:
+    - echo "TODO"
