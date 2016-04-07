@@ -3,7 +3,6 @@ vile:
     - .build
     - coverage
     - node_modules
-    - lib
     - tags
     - .test
     - .ctags
