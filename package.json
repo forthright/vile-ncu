@@ -1,6 +1,6 @@
 {
   "name": "@forthright/vile-ncu",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "A vile plugin for keeping up to date npm dependencies",
   "author": "Brent Lintner <brent.lintner@gmail.com>",
   "license": "MPL-2.0",
