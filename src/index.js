@@ -18,7 +18,8 @@ let punish = (plugin_data) =>
     let args = { args: ["--jsonUpgraded"] }
 
     vile.spawn(NCU_BIN, args)
-      .then((stdout) => {
+      .then((spawn_data) => {
+        let stdout = _.get(spawn_data, "stdout")
         let upgradeable = stdout ? JSON.parse(stdout) : null
 
         resolve(_.map(upgradeable, (version, name) => {
