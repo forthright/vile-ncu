@@ -26,8 +26,6 @@ let punish = (plugin_data) =>
           return vile.issue({
             type: vile.DEP,
             path: PKG_JSON,
-            title: "New dependency release",
-            message: `${name} ${current} < ${version}`,
             signature: `ncu::${name}::${current}::${version}`,
             dependency: {
               name: name,
