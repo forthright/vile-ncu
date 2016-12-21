@@ -1,6 +1,6 @@
 # vile-ncu [![Circle CI](https://circleci.com/gh/forthright/vile-ncu.svg?style=svg&circle-token=d502ee777f304a41fbfec019f4cd8ee2652d6fa8)](https://circleci.com/gh/forthright/vile-ncu)
 
-[![score-badge](https://vile.io/api/v0/projects/vile-ncu/badges/score?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-ncu) [![security-badge](https://vile.io/api/v0/projects/vile-ncu/badges/security?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~/brentlintner/vile-ncu) [![coverage-badge](https://vile.io/api/v0/projects/vile-ncu/badges/coverage?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~/brentlintner/vile-ncu) [![dependency-badge](https://vile.io/api/v0/projects/vile-ncu/badges/dependency?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~/brentlintner/vile-ncu)
+[![score-badge](https://vile.io/api/v0/projects/vile-ncu/badges/score?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-ncu) [![security-badge](https://vile.io/api/v0/projects/vile-ncu/badges/security?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-ncu) [![coverage-badge](https://vile.io/api/v0/projects/vile-ncu/badges/coverage?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-ncu) [![dependency-badge](https://vile.io/api/v0/projects/vile-ncu/badges/dependency?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-ncu)
 
 A [vile](https://vile.io) plugin for [npm-check-updates](https://github.com/tjunnone/npm-check-updates).
 
