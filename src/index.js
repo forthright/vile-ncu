@@ -15,7 +15,7 @@ let punish = (plugin_data) =>
 
     let deps = _.get(pkg, "dependencies", [])
     let dev_deps = _.get(pkg, "devDependencies", [])
-    let args = { args: ["--jsonUpgraded"] }
+    let args = { args: ["-a", "--jsonUpgraded"] }
 
     vile.spawn(NCU_BIN, args)
       .then((spawn_data) => {
