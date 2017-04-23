@@ -11,9 +11,17 @@ A [vile](https://vile.io) plugin for [npm-check-updates](https://github.com/tjun
 
 ## Installation
 
-    npm i npm-check-updates --save-dev
-    npm i @forthright/vile --save-dev
-    npm i @forthright/vile-ncu --save-dev
+    npm i -D vile vile-ncu npm-check-updates
+
+## Config
+
+If you want to use the `--upgradeAll` option, set it in your `.vile.yml`:
+
+```yaml
+ncu:
+  config:
+    all: true
+```
 
 ## Restrictions
 
