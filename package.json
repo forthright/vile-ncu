@@ -66,6 +66,6 @@
     "vile-language": ">=0.1.12",
     "vile-ncu": ">=0.2.1",
     "vile-nsp": ">=0.2.13",
-    "vile-stat": "0.0.14"
+    "vile-stat": ">=0.0.14"
   }
 }
