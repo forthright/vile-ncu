@@ -23,7 +23,7 @@
     "dev": "bin/dev",
     "ncu": "ncu -a",
     "test": "bin/test",
-    "vile": "vile p -usi --nodecorations",
+    "vile": "vile p -u -n",
     "release-it": "release-it"
   },
   "keywords": [
@@ -40,8 +40,8 @@
     "lodash": "^4.17.4"
   },
   "peerDependencies": {
-    "vile": ">=0.13.0",
-    "npm-check-updates": ">=2.10.5"
+    "vile": ">=0.15.0",
+    "npm-check-updates": "^2.10.5"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -51,21 +51,21 @@
     "istanbul": "^0.4.5",
     "mimus": "^0.2.5",
     "mocha": "^2.0.0",
-    "npm-check-updates": ">=2.10.5",
+    "npm-check-updates": "^2.10.5",
     "release-it": "^2.7.1",
     "sinon": "^2.1.0",
     "sinon-chai": "^2.9.0",
-    "vile": ">=0.14.0",
-    "vile-coffeelint": ">=0.1.14",
-    "vile-comment": ">=0.1.17",
-    "vile-coverage": ">=0.2.14",
-    "vile-depcheck": ">=0.1.12",
-    "vile-eclint": ">=0.1.13",
-    "vile-eslint": ">=0.1.13",
+    "vile": "^0.15.0",
+    "vile-coffeelint": "^0.1.14",
+    "vile-comment": "^0.1.17",
+    "vile-coverage": "^0.2.14",
+    "vile-depcheck": "^0.1.12",
+    "vile-eclint": "^0.1.13",
+    "vile-eslint": "^0.1.13",
     "vile-git": "^0.5.1",
-    "vile-language": ">=0.1.12",
-    "vile-ncu": ">=0.2.1",
-    "vile-nsp": ">=0.2.13",
-    "vile-stat": ">=0.0.14"
+    "vile-language": "^0.1.12",
+    "vile-ncu": "^0.2.1",
+    "vile-nsp": "^0.2.13",
+    "vile-stat": "^0.0.14"
   }
 }
