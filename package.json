@@ -1,7 +1,7 @@
 {
   "name": "vile-ncu",
   "version": "0.2.4",
-  "description": "A vile plugin for keeping up to date npm dependencies",
+  "description": "Track outdated npm dependencies.",
   "main": "lib/index.js",
   "files": [
     "lib",

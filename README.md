@@ -1,11 +1,10 @@
 # vile-ncu [![Circle CI](https://circleci.com/gh/forthright/vile-ncu.svg?style=shield&circle-token=d502ee777f304a41fbfec019f4cd8ee2652d6fa8)](https://circleci.com/gh/forthright/vile-ncu) [![score-badge](https://vile.io/api/v0/projects/vile-ncu/badges/score?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-ncu) [![security-badge](https://vile.io/api/v0/projects/vile-ncu/badges/security?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-ncu) [![coverage-badge](https://vile.io/api/v0/projects/vile-ncu/badges/coverage?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-ncu) [![dependency-badge](https://vile.io/api/v0/projects/vile-ncu/badges/dependency?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-ncu)
 
-A [vile](https://vile.io) plugin for [npm-check-updates](https://github.com/tjunnone/npm-check-updates).
+A [Vile](https://vile.io) plugin for tracking outdated npm dependencies (via [npm-check-updates](https://github.com/tjunnone/npm-check-updates)).
 
 ## Requirements
 
-- [nodejs](http://nodejs.org)
-- [npm](http://npmjs.org)
+- [Node.js](http://nodejs.org)
 
 ## Installation
 
@@ -27,7 +26,7 @@ Currently, you need to have your `package.json` in your `pwd`.
 
 ## Versioning
 
-This project ascribes to [semantic versioning](http://semver.org).
+This project uses [Semver](http://semver.org).
 
 ## Licensing
 
@@ -54,8 +53,6 @@ Even if you are uncomfortable with code, an issue or question is welcome.
 
 ### Code Of Conduct
 
-This project ascribes to [contributor-covenant.org](http://contributor-covenant.org).
-
 By participating in this project you agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ### Maintainers
@@ -64,10 +61,10 @@ By participating in this project you agree to our [Code of Conduct](CODE_OF_COND
 
 ## Architecture
 
-- `src` is es6+ syntax compiled with [babel](https://babeljs.io)
+- `src` is es6+ syntax compiled with [Babel](https://babeljs.io)
 - `lib` generated js library
 
-## Hacking
+## Developing
 
     cd vile-ncu
     npm install
