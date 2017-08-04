@@ -1,46 +1,48 @@
-let fs = require("fs")
-let path = require("path")
-let vile = require("vile")
-let _ = require("lodash")
-let Promise = require("bluebird")
+const fs = require("fs")
+const vile = require("vile")
+const _ = require("lodash")
+const ncu = require("npm-check-updates")
 
-const NCU_BIN = "ncu"
+// HACK: you can see a progress bar when using ncu's lib
+process.env.npm_config_progress = false
+
 const PKG_JSON = "package.json"
 
-let punish = (plugin_data) =>
-  new Promise((resolve, reject) => {
-    let upgrade_all = _.get(plugin_data, "config.all", false)
-    let pkg = JSON.parse(fs.readFileSync(
-      path.join(process.cwd(), PKG_JSON), "utf-8"
-    ))
-
-    let deps = _.get(pkg, "dependencies", [])
-    let dev_deps = _.get(pkg, "devDependencies", [])
-    let args = [ "--jsonUpgraded" ]
-
-    if (upgrade_all) args.push("-a")
-
-    vile.spawn(NCU_BIN, { args: args })
-      .then((spawn_data) => {
-        let stdout = _.get(spawn_data, "stdout")
-        let upgradeable = stdout ? JSON.parse(stdout) : null
-
-        resolve(_.map(upgradeable, (version, name) => {
-          let current = deps[name] || dev_deps[name]
-          return vile.issue({
-            type: vile.DEP,
-            path: PKG_JSON,
-            signature: `ncu::${name}::${current}::${version}`,
-            dependency: {
-              name: name,
-              current: current,
-              latest: version
-            }
-          })
-        }))
-      })
-      .catch(reject)
+const into_issues = (pkg, pkg_path) => (upgraded) => {
+  const deps = _.get(pkg, "dependencies", [])
+  const dev_deps = _.get(pkg, "devDependencies", [])
+  return _.map(upgraded, (version, name) => {
+    const current = deps[name] || dev_deps[name]
+    return vile.issue({
+      type: vile.DEP,
+      path: pkg_path,
+      signature: `ncu::${name}::${current}::${version}`,
+      dependency: {
+        name: name,
+        current: current,
+        latest: version
+      }
+    })
   })
+}
+
+const ncu_opts = (plugin_data, pkg_path) => {
+  return {
+    packageFile: pkg_path,
+    silent: true,
+    jsonUpgraded: true,
+    upgradeAll: _.get(plugin_data, "config.all", false)
+  }
+}
+
+const punish = (plugin_data) => {
+  const pkg_path = _.get(plugin_data, "config.path", PKG_JSON)
+  const pkg = JSON.parse(fs.readFileSync(pkg_path).toString())
+
+  return ncu
+    .run(ncu_opts(plugin_data, pkg_path))
+    .then(into_issues(pkg, pkg_path))
+}
 
 module.exports = {
   punish: punish

@@ -8,21 +8,24 @@ A [Vile](https://vile.io) plugin for tracking outdated npm dependencies (via [np
 
 ## Installation
 
-    npm i -D vile vile-ncu npm-check-updates
+Note: This plugin is already packaged with [vile's core lib](https://github.com/forthright/vile).
+
+    npm i -D vile vile-ncu
+
+## Usage
+
+    vile a -p ncu
 
 ## Config
 
-If you want to use the `--upgradeAll` option, set it in your `.vile.yml`:
+*default options*
 
 ```yaml
 ncu:
   config:
-    all: true
+    all: false # --upgradeAll
+    path: "package.json"
 ```
-
-## Restrictions
-
-Currently, you need to have your `package.json` in your `pwd`.
 
 ## Versioning
 
