@@ -67,7 +67,7 @@
     "vile-escomplex": "^0.1.6",
     "vile-eslint": "^0.1.14",
     "vile-git": "^0.5.3",
-    "vile-ncu": "^0.2.4",
+    "vile-ncu": "^0.3.0",
     "vile-nsp": "^0.2.14",
     "vile-stat": "^0.1.0",
     "vile-synt": "^0.1.3"
