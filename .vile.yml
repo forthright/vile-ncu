@@ -22,7 +22,3 @@ vile:
 depcheck:
   config:
     ignore_dev_deps: true
-
-coverage:
-  config:
-    path: coverage/lcov.info
