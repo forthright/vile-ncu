@@ -8,7 +8,8 @@ A [Vile](https://vile.io) plugin for tracking outdated npm dependencies (via [np
 
 ## Installation
 
-Note: This plugin is already packaged with [vile's core lib](https://github.com/forthright/vile).
+This plugin is already packaged with [vile's core lib](https://github.com/forthright/vile),
+but you can also install it manually:
 
     npm i -D vile vile-ncu
 
