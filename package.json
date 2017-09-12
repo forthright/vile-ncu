@@ -1,6 +1,6 @@
 {
   "name": "vile-ncu",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Track outdated npm dependencies.",
   "main": "lib/index.js",
   "files": [
