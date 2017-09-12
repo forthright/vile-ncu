@@ -28,6 +28,16 @@ ncu:
     path: "package.json"
 ```
 
+## Known Issues
+
+If you are using `yarn` you might run into this:
+
+    TypeError: log.gauge.isEnabled is not a function
+
+Checkout this open issue at [yarnpkg/yarn](https://github.com/yarnpkg/yarn/issues/3202) for some help.
+
+Also trying `npm i -D npmlog` or `npm i -D npm` might do the trick.
+
 ## Versioning
 
 This project uses [Semver](http://semver.org).
