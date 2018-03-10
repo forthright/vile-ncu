@@ -39,7 +39,7 @@ describe "punish", ->
   it "converts upgradeable packages to issues", ->
     plugin.punish().should.eventually.eql util.issues
 
-  it "sets default ncu opts", ->
+  it "sets default ncu opts", (done) ->
     plugin.punish().should.eventually.be.fulfilled.notify ->
       process.nextTick ->
         ncu.run.should.have.been.calledWith
@@ -48,6 +48,7 @@ describe "punish", ->
           jsonUpgraded: true,
           upgradeAll: false
         done()
+    return
 
   describe "when ncu fails", ->
     reject_err = undefined
